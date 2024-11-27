@@ -44,8 +44,10 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple dronecan==1.0.26
 ./waf clean
 ./waf configure --board sitl --debug
 ./waf -j8 copter -v  # 编译
-python Tools/autotest/sim_vehicle.py --console --map -w -v ArduCopter  # 将会启动飞控界面
+python Tools/autotest/sim_vehicle.py --console --map -w -v ArduCopter  # 将会启动飞控界面--这里会出现一个地址，你可以可以在命令行界面回车直接控制sitl, 下面mavproxy.py会用这个地址可以实现远程控制
 # sudo apt-get install -y flightgear
-python Tools/autotest/sim_vehicle.py -L KSFO -v ArduCopter
+# python Tools/autotest/sim_vehicle.py -L KSFO -v ArduCopter
 ----
-############
+# 地面站飞行控制，地址输入sitl的运行地址，即sim_vehicle.py运行的地址即可
+# https://ardupilot.org/mavproxy/docs/getting_started/quickstart.html  ------ 学习如何控制
+mavproxy.py --master=tcp:127.0.0.1:5760
