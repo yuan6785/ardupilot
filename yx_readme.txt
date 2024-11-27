@@ -14,7 +14,7 @@ https://www.cnblogs.com/qsbye/p/18229006
 https://blog.csdn.net/weixin_43321489/article/details/132422643
 官网仿真文档:
 https://ardupilot.org/dev/docs/simulation-2.html  有仿真的介绍(FDM和仿真的概念介绍以及流程图---一定要看)
-https://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html  初级仿真
+https://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html  初级仿真---第一步要用的(mac也可以运行---一定要看)
 其他文章
 https://www.bilibili.com/opus/882110201551912992   ArduPilot的前世今生(用ardupilot做diy的第一步)
 
@@ -49,6 +49,3 @@ python Tools/autotest/sim_vehicle.py --console --map -w -v ArduCopter  # 将会�
 python Tools/autotest/sim_vehicle.py -L KSFO -v ArduCopter
 ----
 ############
-
-python Tools/autotest/sim_vehicle.py -w
-python Tools/autotest/sim_vehicle.py -v ArduCopter --console --map
