@@ -1,5 +1,7 @@
 该分支是从tag为Copter-4.5.7拉出来的
 
+解决每次push都会发大量邮件的问题
+重命名 .github/workflows为workflows_yx_delte 文件夹后，GitHub 就无法找到工作流配置文件，自然也就不会触发工作流了。这种方法适合临时或快速禁用所有工作流。
 
 
 仿真编译参考:
