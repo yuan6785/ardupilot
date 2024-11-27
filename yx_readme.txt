@@ -75,20 +75,20 @@ rc 3 1000   # 还原油门
 #######
 
 
-简单例子https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html
+简单例子https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html   （---------重要-------）
 #########执行飞行命令#########
 # 开始垂直起飞高度为40米
-mode guided
+mode guided  
 arm throttle # 解锁电机响应命令，在另外的解锁下，需要先disarm断开电机
-takeoff 40
-
+takeoff 40  # 需要时间，不要切换模式
 # 绕圈圈
 rc 3 1500
 mode circle
 param set circle_radius 2000
 #########重置命令#############
 batreset # 重置电池
-mode rtl # 飞回起点
-mode land # 降落
+mode rtl # 飞回起点--需要时间，不要切换模式
+mode land # 降落--需要时间，不要切换模式
 disarm force # 断开电机
+batreset # 重置电池
 ############################
