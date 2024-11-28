@@ -89,6 +89,7 @@ param set circle_radius 2000
 batreset # 重置电池
 mode rtl # 飞回起点--需要时间，不要切换模式
 mode land # 降落--需要时间，不要切换模式
+rc 3 1000 # 还原油门--重要--需要在arm throttle后执行
 disarm force # 断开电机
 batreset # 重置电池
 ############################
