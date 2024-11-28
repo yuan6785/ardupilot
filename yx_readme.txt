@@ -13,6 +13,8 @@ b. sitl是无需任何硬件在pc上面模拟传感器数据的模拟飞行模�
 https://www.cnblogs.com/qsbye/p/18229006
 该网页静态文件我已经存在本项目
 0yxgithub/ardupilot/搭建ArduPilot的SITL仿真环境 - qsBye - 博客园.mhtml
+仿真的另外一篇:
+https://dronechina.net/t/topic/1046/2
 另外一篇:
 https://blog.csdn.net/weixin_43321489/article/details/132422643
 官网仿真文档:
