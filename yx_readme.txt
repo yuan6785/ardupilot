@@ -1,7 +1,7 @@
 该分支是从tag为Copter-4.5.7拉出来的
 
 a. ardupilot是安装在UAV的飞控上面的操作系统,可以随时根据传感器的数据来调整UAV的平衡;
-b. sitl是无需任何硬件在pc上面模拟传感器数据的模拟飞行模式;
+b. sitl是无需任何硬件在pc上面模拟传感器数据的模拟飞行模式,参考本文的【sitl的原理】;
 
 解决每次push都会发大量邮件的问题
 重命名 .github/workflows为workflows_yx_delte 文件夹后，GitHub 就无法找到工作流配置文件，自然也就不会触发工作流了。这种方法适合临时或快速禁用所有工作流。
@@ -118,6 +118,7 @@ reboot # reboot 命令会重启 APM（自动驾驶仪），用于恢复飞控系
 
 
 sitl的原理
+https://doc.cuav.net/tutorial/copter/simulation.html
 ###############
 SITL模拟器（循环中的软件）
 SITL（循环中的软件）模拟器允许您在没有任何硬件的情况下运行Plane，Copter或Rover。 它是使用普通C ++编译器构建的自动驾驶仪代码，为您提供了一个本机可执行文件，允许您在没有硬件的情况下测试代码。
