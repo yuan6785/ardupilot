@@ -29,6 +29,8 @@ https://ardupilot.org/copter/docs/parameters-Copter-stable-V4.5.7.html  完整�
 https://www.bilibili.com/opus/882110201551912992   ArduPilot的前世今生(用ardupilot做diy的第一步)
 比较好的中文diy教程
 https://doc.cuav.net/tutorial/copter/
+http://www.nufeichuiyun.com/?p=47  ArduPilot的copter的常用参数解释
+文件已保存在当前目录: APM常用参数设置方法（持续更新） - 怒飞垂云 _ 无人机知识库
 
 #官方mac 编译
 https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md
@@ -88,7 +90,11 @@ rc 3 1000   # 还原油门
 param load <path to parameter file>
 ######保存参数######
 param save <path to parameter file>  # 启动默认在mav.parm下面
-
+#####有用的参数#####
+http://www.nufeichuiyun.com/?p=47  ArduPilot的copter的常用参数解释 # 文件保存在当前目录APM常用参数设置方法（持续更新） - 怒飞垂云 _ 无人机知识库
+#####变化的自重参考 https://discuss.ardupilot.org/t/weight-changes-while-in-flight/74160  ##########
+MOT_THST_HOVER   # 悬停推力，其实可以用于表示无人机自重-----我自己找的
+##########
 
 
 简单例子: https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html   （---------重要-------）
