@@ -1,7 +1,8 @@
 该分支是从tag为Copter-4.5.7拉出来的
 
 a. ardupilot是安装在UAV的飞控上面的操作系统,可以随时根据传感器的数据来调整UAV的平衡;
-b. sitl是无需任何硬件在pc上面模拟传感器数据的模拟飞行模式,参考本文的【sitl的原理】;
+b. sitl是无需任何硬件在pc上面模拟传感器数据的模拟飞行模式,参考本文的【sitl的原理】; SITL要把硬件参数录入，比如飞机的电池电量， 重量， 动力范围等输入进去; 这样可以防止摔机
+c. hitl硬件仿真(读取正式无人机传感器数据) https://ardupilot.org/dev/docs/hitl-simulators.html  ----自己制作，一般不需要，硬件成本太高了。
 
 解决每次push都会发大量邮件的问题
 重命名 .github/workflows为workflows_yx_delte 文件夹后，GitHub 就无法找到工作流配置文件，自然也就不会触发工作流了。这种方法适合临时或快速禁用所有工作流。
