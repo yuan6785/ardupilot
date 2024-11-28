@@ -24,7 +24,7 @@ https://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html  初级仿真---第
 https://ardupilot.org/dev/docs/copter-sitl-mavproxy-tutorial.html  仿真教程--各种命令--重要-----一定要看
 https://ardupilot.org/dev/docs/plane-sitlmavproxy-tutorial.html  界面使用---重要-----
 https://ardupilot.org/copter/docs/common-parameter-reset.html   重置参数
-https://ardupilot.org/plane/docs/parameters.html#parameters-sim  完整参数列表(硬件参数，可以自己手动配置你的无人机大概的硬件参数)
+https://ardupilot.org/copter/docs/parameters.html  完整参数列表(硬件参数，可以自己手动配置你的无人机大概的硬件参数)
 其他文章
 https://www.bilibili.com/opus/882110201551912992   ArduPilot的前世今生(用ardupilot做diy的第一步)
 比较好的中文diy教程
@@ -67,7 +67,10 @@ mavproxy.py --master=tcp:127.0.0.1:14450  # 这里用的是sitl的启动后输�
 #######
 param show *  # 查看所有参数
 ######
-param set BATT_CAPACITY 10000  # 设置电池容量（单位：mAh）
+param set BATT_CAPACITY 10000  # 设置电池容量（单位：mAh）--电池充满时容量
+param show BATT_CAPACITY
+param show SIM_BATT_CAP_AH    # 也是电池容量，但是为0。 不知道什么含义
+param show SIM_BATT_VOLTAGE   # 模拟电池电压 
 ######
 # param set SIM_BATTERY {VALUE}
 param set FORMAT_VERSION 0
@@ -81,10 +84,14 @@ disarm force  # 用了arm命令后需要用disarm命令来断开电机
 输入 mode rtl，飞行器会返回起飞点。
 输入 mode land，飞行器会直接降落。
 rc 3 1000   # 还原油门
-#######
+#######加载参数#####
+param load <path to parameter file>
+######保存参数######
+param save <path to parameter file>  # 启动默认在mav.parm下面
 
 
-简单例子https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html   （---------重要-------）
+
+简单例子: https://ardupilot.org/dev/docs/sitl-on-windows-wsl.html   （---------重要-------）
 #########执行飞行命令#########
 # 开始垂直起飞高度为40米
 mode guided  
